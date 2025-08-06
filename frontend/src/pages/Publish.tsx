@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AppBar } from "@/components/AppBar";
-import { div } from "motion/react-client";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "@/config";
