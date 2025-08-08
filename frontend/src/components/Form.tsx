@@ -21,7 +21,11 @@ export const Form = ({ type }: { type: string }) => {
       console.log(url);
       const data =
         t == "signup"
-          ? { name: form.name, username: form.email, password: form.password }
+          ? {
+              name: form.name || "Anon",
+              username: form.email,
+              password: form.password,
+            }
           : { username: form.email, password: form.password };
       console.log(data);
       const response = await axios.post(url, data);
